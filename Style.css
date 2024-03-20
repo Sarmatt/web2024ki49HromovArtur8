@@ -1,0 +1,285 @@
+body {
+	padding: 0px;
+	font-family: Arial, sans-serif;
+	background-color: #0D0D0D;
+}
+
+/* Header */
+
+header {
+	background-color: #f4f4f4;
+	padding: 0px;
+	text-align: center;
+}
+
+.company-data{
+
+	background-image: url(img/HeaderFon.png);
+	background-color: #333;
+	color: #fff;
+	padding: 0px;
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+.company-data-title{
+	width: 95%;
+	position: absolute;
+}
+
+.company-data-logo{
+	margin-left: 25px;
+	display: block;
+	width: 5%;
+	position: absolute;
+}
+
+
+.background-link-container {
+	background-color: #0F6799;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  height: 45px;
+  width: 100px;
+}
+
+.background-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+/* Project Title */
+
+.project-title{
+	padding: 0px;
+	position: relative;
+	height: 600px;
+	background-image: url(img/ProjectTitle.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+}
+
+
+.project-title p{
+	font-family: 'Metal Mania';
+	position: absolute;
+	width: 100%;
+	margin-top: 250px;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+	font-size: 128px;
+}
+
+/* Content1 */
+
+.content1{
+	margin-top: 10px;
+	height: 485px;
+	background-image: url(img/Description1Fon.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content1 p{
+	font-family: 'Koulen';
+	font-size: 65px;
+	color: white;
+	width: 65%;
+  text-align: center;
+}
+
+/* map */
+
+.map{
+	padding: 0;
+	width: 100%;
+	height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-character{
+	width: 50%;
+	float: left;
+}
+
+.map-map{
+	width: 50%;
+	float: right;
+}
+
+.map p{
+	font-family: 'Koulen';
+	height: 50px;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+	vertical-align: middle;
+	font-size: 75px;
+}
+
+/* Coming Out */
+
+.countdown-container-title{
+		padding: 0;
+		height: 200px;
+		width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.countdown-container-title p{
+		font-family: 'Koulen';
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 75px;
+}
+
+  .countdown-container 
+  {
+  		font-family: 'Koulen';
+  					background-image: url(img/ComingOutFon.png);
+  						background-repeat: no-repeat;
+    background-size: cover;
+  					width: 100%;
+  					color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+        .countdown-item {
+
+            margin: 0 1rem;
+        }
+        .timer-label {
+            text-transform: uppercase;
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+/* Images Grid */
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5px;
+}
+
+.image-item {
+	height: 350px;
+	overflow: hidden;
+}
+
+.image-item img {
+	width: 100%;
+	height: auto;
+}
+
+/* Counter */
+
+#countdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+#countdown span {
+	font-size: 24px;
+	padding: 10px;
+	margin: 0 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+footer {
+	background-color: #f4f4f4;
+	padding: 10px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+footer p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	margin: 0 10px;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul li a img {
+	height: 24px;
+	width: 24px;
+}
+
+/* Contact */
+
+.contact-title{
+		padding: 0;
+	height: 125px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-title p{
+		font-family: 'Koulen';
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 75px;
+}
+
+.contact {
+	background-color: #2B2B2B;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-link{
+	height: 100px;
+	width: 100%;
+}
+
+.contact-link img{
+	width: 75px;
+	height: 75px;
+}
+
+.contact-link a{
+		font-size: 50px;
+	font-family: 'Koulen';
+	color: #B0B0B0;
+	text-decoration: none;
+	margin-left: 25px;
+}
