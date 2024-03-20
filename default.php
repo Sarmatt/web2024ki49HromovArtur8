@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>LiteralNest Rustcraft</title>
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Metal Mania' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Koulen' rel='stylesheet'>
 </head>
@@ -38,26 +38,46 @@
 			<p>Coming out in:</p>
 		</div>
 
-
-	 <div class="countdown-container">
+    <div class="countdown-container">
         <div>
-            
-            <span id="days">07</span>
-            <div class="timer-label">Days</div>
+            <?php
+            // Function definition
+            function displayRemainingTime($endTime) {
+                // Current timestamp
+                $currentTime = time();
+                
+                // Calculate remaining time in seconds
+                $remainingTime = $endTime - $currentTime;
+                
+                // Convert remaining time to hours, minutes, and seconds
+                $hours = floor($remainingTime / 3600);
+                $minutes = floor(($remainingTime % 3600) / 60);
+                $seconds = $remainingTime % 60;
+                
+                // Output remaining time
+echo '<div>';
+                echo '<span id="days">' . sprintf("%02d", floor($hours / 24)) . '</span>';
+                echo '<div class="timer-label">Days</div>';
+                echo '</div>';
+                echo '<div class="countdown-item">';
+                echo '<span id="hours">' . sprintf("%02d", $hours % 24) . '</span>';
+                echo '<div class="timer-label">Hours</div>';
+                              echo '</div>';
+                              echo ' <div class="countdown-item">';
+                echo '<span id="minutes">' . sprintf("%02d", $minutes) . '</span>';
+                echo '<div class="timer-label">Minutes</div>';
+                          echo '</div>';
+                          echo '       <div class="countdown-item">';
+                echo '<span id="seconds">' . sprintf("%02d", $seconds) . '</span>';
+                echo '<div class="timer-label">Seconds</div>';
+                     echo '</div>';
+            }
+
+            // Example usage: Display remaining time until 2023-12-31 23:59:59
+            $endTime = strtotime("2024-04-15 23:59:59");
+            displayRemainingTime($endTime);
+            ?>
         </div>
-        <div class="countdown-item">
-            <span id="hours">13</span>
-            <div class="timer-label">Hours</div>
-        </div>
-        <div class="countdown-item">
-            <span id="minutes">24</span>
-            <div class="timer-label">Minutes</div>
-        </div>
-        <div class="countdown-item">
-            <span id="seconds">59</span>
-            <div class="timer-label">Seconds</div>
-        </div>
-    </div>
 </section>
 
 	<section>
