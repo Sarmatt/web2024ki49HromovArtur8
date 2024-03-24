@@ -34,7 +34,7 @@ header {
   position: absolute;
 }
 
-/* Register form */
+/* ` form */
 
 .register-form {
   color: white;
@@ -70,7 +70,7 @@ header {
   box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
 }
 
-.register-form input[type="submit"] {
+.register-form .registerButton button{
   background-color: #4CAF50;
   color: white;
   padding: 5px 10px;
@@ -79,7 +79,7 @@ header {
   cursor: pointer;
 }
 
-.register-form input[type="submit"]:hover {
+.register-form .registerButton button:hover {
   background-color: #3e8e41;
 }
 
@@ -90,4 +90,9 @@ header {
 
 .register-form a:hover {
   text-decoration: underline;
+}
+
+.errors{
+  color: red;
+    font-family: Arial, sans-serif;
 }
