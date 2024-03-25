@@ -15,20 +15,59 @@
     </div>  
   </header>
 
-<div class="register-form">
+<?php
+ if (isset($_POST["submit"])) {
+    include_once("lab_dbinitializer.php");
+    
+    $name = $_POST["username"];
+    $password = $_POST["password"];
+    $email = $_POST["email"];
+    $namecheckquery = "SELECT nickname FROM Users WHERE nickname ='".$name."';";
+    $namecheck = mysqli_query($con, $namecheckquery) or die("Name check query failed");
+
+    if(mysqli_num_rows($namecheck) > 0){
+        header("Location: lab_register_form.php?error=username_exists");
+        echo " Name already exists ";
+        exit();
+    }
+echo "1";
+    $sql = "INSERT INTO Users (nickname, password, email) VALUES ('".$name."','".$password."','".$email."');";
+
+    if ($con->query($sql) === TRUE) {
+        echo "User registered successfully!";
+        header("Location: authorization.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $con->error;
+    }
+echo "1";
+
+$con->close();
+}
+?>
+
+<div class="register-form" id ="register-form">
   <h2>Register</h2>
-  <form>
+  <form action="register.php" method="post">
     <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
+    <input type="text" id="username"><br>
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
+    <input type="email" id="email"><br>
     <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <label for="confirm-password">Confirm Password:</label><br>
-    <input type="password" id="confirm-password" name="confirm-password"><br>
-    <input type="submit" value="Register">
+    <input type="password" id="password"><br>
+
+ <div class="registerButton">
+     <input type="submit" name="submit" id="submit" class="btn btn-primary">
+
+    </div>
+
   </form>
+
+ 
   <p>Already have an account? <a href="/authorization.php">Login here</a></p>
+</div>
+
+<div id="errors" class="errors">
+               <p> Errors: </p> 
 </div>
 
 </body>

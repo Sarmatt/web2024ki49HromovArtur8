@@ -93,3 +93,8 @@ header {
 .auth-form a:hover {
   text-decoration: underline;
 }
+
+/* Error */
+.error-box p{
+color: red;
+}
